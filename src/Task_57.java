@@ -12,10 +12,10 @@ public class Task_57 {
         int n = 0;
         double tempDist = 0.0;
         double minDist = 0.0;
-        int [] x = null;
-        int [] y = null;
+        int[] x = null;
+        int[] y = null;
         int priceC = 0;
-        int summP=0;
+        int summP = 0;
         int xNet = 0, yNet = 0;
         boolean more_then_min = false;
         String result = null;
@@ -25,8 +25,8 @@ public class Task_57 {
             n = scan.nextInt();
             priceC = scan.nextInt();
             summP = scan.nextInt();
-            x = new int [n];
-            y = new int [n];
+            x = new int[n];
+            y = new int[n];
             for (int i = 0; i < n; i++) {
                 x[i] = scan.nextInt();
                 y[i] = scan.nextInt();
@@ -37,25 +37,25 @@ public class Task_57 {
             e.printStackTrace();
         }
 
-        minDist = summP/priceC;
+        minDist = summP / priceC;
 
         for (int i = 0; i < n; i++) {
             tempDist = 0;
             more_then_min = false;
 
-            for (int j = 0; j < n; j++){
-                if(i!=j){
-                tempDist += Math.sqrt(Math.pow(Math.abs(x[j]-x[i]),2) + Math.pow(Math.abs(y[j]-y[i]),2));
-                if(tempDist > minDist){
-                    //more_then_min = true;
-                    break;
-                  }
+            for (int j = 0; j < n; j++) {
+                if (i != j) {
+                    tempDist += Math.sqrt(Math.pow(Math.abs(x[j] - x[i]), 2) + Math.pow(Math.abs(y[j] - y[i]), 2));
+                    if (tempDist > minDist) {
+                        //more_then_min = true;
+                        break;
+                    }
                 }
-                }
-                tempDist += Math.sqrt(Math.pow(Math.abs(xNet-x[i]),2) + Math.pow(Math.abs(yNet-y[i]),2));
-                if (tempDist <= minDist ){
-                    more_then_min = true;
-                    break;
+            }
+            tempDist += Math.sqrt(Math.pow(Math.abs(xNet - x[i]), 2) + Math.pow(Math.abs(yNet - y[i]), 2));
+            if (tempDist <= minDist) {
+                more_then_min = true;
+                break;
             }
         }
 
