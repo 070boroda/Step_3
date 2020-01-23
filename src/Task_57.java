@@ -6,6 +6,10 @@ import java.util.Scanner;
 
 public class Task_57 {
 
+    public static int pow(int x){
+        return x*x;
+    }
+
     public static void main(String[] args) {
 
         int n = 0;
@@ -44,13 +48,13 @@ public class Task_57 {
 
             for (int j = 0; j < n; j++) {
                 if (i != j) {
-                    tempDist += Math.sqrt(Math.pow(Math.abs(x[j] - x[i]), 2) + Math.pow(Math.abs(y[j] - y[i]), 2));
+                    tempDist += Math.sqrt(pow(Math.abs(x[j] - x[i])) + pow(Math.abs(y[j] - y[i])));
                     if (tempDist > minDist) {
                         break;
                     }
                 }
             }
-            tempDist += Math.sqrt(Math.pow(Math.abs(xNet - x[i]), 2) + Math.pow(Math.abs(yNet - y[i]), 2));
+            tempDist += Math.sqrt(pow(Math.abs(xNet - x[i])) + pow(Math.abs(yNet - y[i])));
             if (tempDist <= minDist) {
                 more_then_min = true;
                 break;
