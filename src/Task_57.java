@@ -21,7 +21,7 @@ public class Task_57 {
         long sumP = 0;
         int xNet = 0, yNet = 0;
         boolean more_then_min = false;
-        String result = null;
+        String result;
 
         try (BufferedReader in = new BufferedReader(new FileReader("input.txt"))) {
             Scanner scan = new Scanner(in);
