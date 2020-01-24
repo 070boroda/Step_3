@@ -9,6 +9,7 @@ public class Task_16 {
     public static void main(String[] args) {
 
         int n =0;
+
         try (BufferedReader in = new BufferedReader(new FileReader("input.txt"))) {
             Scanner scan = new Scanner(in);
             n = scan.nextInt();
@@ -36,4 +37,3 @@ public class Task_16 {
         return count;
     }
 }
-
